@@ -1,0 +1,14 @@
+#include "martini_v2.2.itp"
+#include "martini_v2.0_ions.itp"
+#define RUBBER_BANDS
+#include "Protein+Protein_A.itp"
+[ system ]
+; name
+Martini system from ../../../packmol/ROP11-ABI1-31.pdb
+[ molecules ]
+; name        number
+Protein+Protein_A   1
+MG+              2
+W           24777
+NA+              30
+CL-              31

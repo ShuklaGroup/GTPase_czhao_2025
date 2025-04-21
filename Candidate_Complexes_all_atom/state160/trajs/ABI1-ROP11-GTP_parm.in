@@ -1,0 +1,3 @@
+parm ../0-Minimization/ABI1-ROP11-GTP.prmtop
+parmstrip :WAT,Na+,Cl-
+parmwrite out ABI1-ROP11-GTP_strip.prmtop

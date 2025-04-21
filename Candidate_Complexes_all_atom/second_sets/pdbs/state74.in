@@ -1,0 +1,6 @@
+parm ../0-Minimization/state74.prmtop
+trajin ../PROD-04/state74.rst
+center
+autoimage
+strip :Na+,Cl-,WAT
+trajout state74.pdb

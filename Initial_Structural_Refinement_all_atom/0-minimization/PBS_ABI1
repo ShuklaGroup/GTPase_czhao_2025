@@ -1,0 +1,6 @@
+#$ -S /bin/bash
+#$ -q all.q
+#$ -pe orte 1
+#$ -o /home/czhao37/7-GTPase/0-Minimization/ABI1.log
+cd /home/czhao37/7-GTPase/0-Minimization
+/home/mc26/amber18/bin/pmemd -O -i /home/czhao37/7-GTPase/0-Minimization/min.in -o /home/czhao37/7-GTPase/0-Minimization/ABI1.out -p /home/czhao37/7-GTPase/0-Minimization/ABI1.prmtop -c /home/czhao37/7-GTPase/0-Minimization/ABI1.inpcrd -r /home/czhao37/7-GTPase/0-Minimization/ABI1.rst -x /home/czhao37/7-GTPase/0-Minimization/ABI1.mdcrd -inf /home/czhao37/7-GTPase/0-Minimization/ABI1.mdinfo

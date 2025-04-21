@@ -1,0 +1,7 @@
+parm ../0-Minimization/state502.prmtop
+trajin ../PROD-02/state502.mdcrd
+trajin ../PROD-03/state502.mdcrd
+trajin ../PROD-04/state502.mdcrd
+center
+autoimage
+trajout state502.dcd

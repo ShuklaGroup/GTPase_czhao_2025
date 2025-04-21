@@ -1,0 +1,9 @@
+parm ../0-Minimization/ABI1-ROP11-GTP.prmtop
+trajin ../PROD-01/ABI1-ROP11-GTP.mdcrd
+trajin ../PROD-02/ABI1-ROP11-GTP.mdcrd
+trajin ../PROD-03/ABI1-ROP11-GTP.mdcrd
+trajin ../PROD-04/ABI1-ROP11-GTP.mdcrd
+trajin ../PROD-05/ABI1-ROP11-GTP.mdcrd
+center
+autoimage
+trajout ABI1-ROP11-GTP.dcd

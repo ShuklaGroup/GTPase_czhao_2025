@@ -1,0 +1,51 @@
+# Starting and End Points of the Simulation
+
+#Input file name (.in)
+iName=MD-PROD
+#Output file name
+#oName=
+#Name of input rst file
+#cName=
+# Name of the complex
+#cmplx=
+# Name of the Topology file
+#pName=
+
+# .in file address
+iPath=$(pwd)
+# .top file address
+pPath=$(pwd)/../0-Minimization/
+# .crd or .rst file address for input
+cPath=$(pwd)/../0-Minimization/
+# .rst (restart) file address output
+rPath=$(pwd)
+# .out file address
+oPath=$(pwd)
+# General path
+path=$(pwd)
+
+cd ${path}
+
+while read line
+
+do
+
+Jobname=${line}
+
+   echo "#$ -S /bin/bash" > PBS_${Jobname}
+
+   echo "#$ -q all.q" >> PBS_${Jobname}
+
+   echo "#$ -pe orte 16" >> PBS_${Jobname}
+  
+   echo "#$ -N ${line}" >> PBS_${Jobname}
+
+   echo "#$ -o ${path}/${line}.log" >> PBS_${Jobname}
+
+   echo "cd ${path}" >> PBS_${Jobname}
+
+   echo "mpirun -np 16 /home/mc26/amber18/bin/pmemd.MPI -O -i ${iPath}/${iName}.in -o ${oPath}/${line}.out -p ${pPath}/${line}.prmtop -c ${cPath}/${line}.rst -r ${rPath}/${line}.rst -x ${path}/${line}.mdcrd -inf ${path}/${line}.mdinfo -ref ${cPath}/${line}.rst" >> PBS_${Jobname}
+
+   qsub PBS_${Jobname}
+
+done < ../List

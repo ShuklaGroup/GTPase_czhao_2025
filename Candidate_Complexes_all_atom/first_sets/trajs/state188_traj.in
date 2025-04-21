@@ -1,0 +1,8 @@
+parm ../0-Minimization/state188.prmtop
+trajin ../PROD-03/state188.mdcrd
+trajin ../PROD-04/state188.mdcrd
+trajin ../PROD-05/state188.mdcrd
+center
+autoimage
+strip :Na+,Cl-,WAT
+trajout state188_strip.dcd

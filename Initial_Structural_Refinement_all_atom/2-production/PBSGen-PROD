@@ -1,0 +1,44 @@
+# Starting and End Points of the Simulation
+
+# .in file address
+iPath=$(pwd)
+# .top file address
+pPath=$(pwd)/../1-Equil
+# .crd or .rst file address for input
+cPath=$(pwd)/../1-Equil
+# .rst (restart) file address output
+rPath=$(pwd)
+# .out file address
+oPath=$(pwd)
+# General path
+path=$(pwd)
+
+cd ${path}
+
+while read line
+
+do
+
+Jobname=${line}
+
+   echo "#PBS -l nodes=1:ppn=1:xk" > PBS_${Jobname}
+
+   echo "#PBS -l walltime=47:55:00" >> PBS_${Jobname}
+
+   echo "#PBS -N ${Jobname}" >> PBS_${Jobname}
+
+   echo "#PBS -e ${path}/${Jobname}_job.err" >> PBS_${Jobname}
+
+   echo "#PBS -o ${path}/${Jobname}_job.out" >> PBS_${Jobname}
+
+   echo "#PBS -q low" >> PBS_${Jobname}
+
+   echo "#PBS -A jt3" >> PBS_${Jobname}
+
+   echo "cd ${path}" >> PBS_${Jobname}
+
+   echo "aprun -n 1 -N 1 /projects/sciteam/jt3/amber18/bin/pmemd.cuda -O -i ${iPath}/MD-PROD.in -o ${oPath}/${line}.out -p ${pPath}/${line}.prmtop -c ${cPath}/${line}.rst -r ${rPath}/${line}.rst -x ${path}/${line}.mdcrd -ref ${cPath}/${line}.rst -inf ${path}/${line}.mdinfo" >> PBS_${Jobname}
+   
+   qsub PBS_${Jobname}
+
+done < ../List

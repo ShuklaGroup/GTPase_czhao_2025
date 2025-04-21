@@ -1,0 +1,8 @@
+parm ../0-Minimization/state80.prmtop
+trajin ../PROD-03/state80.mdcrd
+trajin ../PROD-04/state80.mdcrd
+trajin ../PROD-05/state80.mdcrd
+center
+autoimage
+strip :Na+,Cl-,WAT
+trajout state80_strip.dcd

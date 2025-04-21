@@ -1,0 +1,9 @@
+#PBS -l nodes=1:ppn=1:xk
+#PBS -l walltime=47:55:00
+#PBS -N ROP11
+#PBS -e /u/sciteam/zhao1/6-GTPase/all-atom/PROD-01/ROP11_job.err
+#PBS -o /u/sciteam/zhao1/6-GTPase/all-atom/PROD-01/ROP11_job.out
+#PBS -q low
+#PBS -A jt3
+cd /u/sciteam/zhao1/6-GTPase/all-atom/PROD-01
+aprun -n 1 -N 1 /projects/sciteam/jt3/amber18/bin/pmemd.cuda -O -i /u/sciteam/zhao1/6-GTPase/all-atom/PROD-01/MD-PROD.in -o /u/sciteam/zhao1/6-GTPase/all-atom/PROD-01/ROP11.out -p /u/sciteam/zhao1/6-GTPase/all-atom/PROD-01/../1-Equil/ROP11.prmtop -c /u/sciteam/zhao1/6-GTPase/all-atom/PROD-01/../1-Equil/ROP11.rst -r /u/sciteam/zhao1/6-GTPase/all-atom/PROD-01/ROP11.rst -x /u/sciteam/zhao1/6-GTPase/all-atom/PROD-01/ROP11.mdcrd -ref /u/sciteam/zhao1/6-GTPase/all-atom/PROD-01/../1-Equil/ROP11.rst -inf /u/sciteam/zhao1/6-GTPase/all-atom/PROD-01/ROP11.mdinfo

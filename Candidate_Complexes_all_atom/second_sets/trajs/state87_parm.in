@@ -1,0 +1,3 @@
+parm ../0-Minimization/state87.prmtop
+parmstrip :WAT,Na+,Cl-
+parmwrite out state87_strip.prmtop

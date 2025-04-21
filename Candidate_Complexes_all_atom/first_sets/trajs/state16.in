@@ -1,0 +1,7 @@
+parm ../0-Minimization/state16.prmtop
+trajin ../PROD-03/state16.mdcrd
+trajin ../PROD-04/state16.mdcrd
+trajin ../PROD-05/state16.mdcrd
+center
+autoimage
+trajout state16.dcd

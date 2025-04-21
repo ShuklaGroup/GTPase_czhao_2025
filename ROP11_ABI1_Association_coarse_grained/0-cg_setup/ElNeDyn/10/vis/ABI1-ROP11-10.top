@@ -1,0 +1,13 @@
+#include "martini.itp"
+
+#define RUBBER_BANDS
+
+#include "Protein+Protein_A.itp"
+
+[ system ]
+; name
+Martini system from ../../../packmol/ROP11-ABI1-10.pdb
+
+[ molecules ]
+; name        number
+Protein+Protein_A 	 1

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while read line
+do 
+
+   pmemd -O -i min.in -o ${line}.out -p ${line}.prmtop -c ${line}.inpcrd -ref ${line}.inpcrd -r ${line}.rst -x ${line}.mdcrd -inf ${line}.mdinfo
+
+done<List
