@@ -28,4 +28,4 @@ Code and supporting files for the paper:
 
 
 ## Simulation trajectories
-- Simulattion trajectories as well as normalized features used in construction of Markov state models are available through University of Illinois Box [folder](https://uofi.box.com/s/0luwjpu7mbg0mvs1gzaonzijixtm8ww4) 
+- Simulation trajectories as well as normalized features used in construction of Markov state models are available through University of Illinois Box [folder](https://uofi.box.com/s/0luwjpu7mbg0mvs1gzaonzijixtm8ww4). 
