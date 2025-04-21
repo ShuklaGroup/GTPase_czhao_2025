@@ -25,3 +25,7 @@ Code and supporting files for the paper:
 - Inputs scripts for all-atom MD simulations.
 - Parameter/topolgy files for all candidate complexes.
 - Pre/post processing scripts.
+
+
+## Simulation trajectories
+- Simulattion trajectories as well as normalized features used in construction of Markov state models are available through University of Illinois Box [folder](https://uofi.box.com/s/0luwjpu7mbg0mvs1gzaonzijixtm8ww4) 
